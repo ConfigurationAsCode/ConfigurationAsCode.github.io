@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Autamatization of processes to build and release software for complex software products by using cloud systems</title>
+    <meta charset="utf-8" />
+
+
+    <link href="css/simple.css" rel="stylesheet" type="text/css" />
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jmpress.js"></script>
+    <script src="js/jmpress_init.js"></script>
+
+</head>
+<body>
+<div id="jmpress">
+    <div class="title step" data-scale="1" data-x="0" data-y="0" data-z="1000" id="title">
+        <header>
+            <h1>From pets versus cattle To configuration as code</h1>
+        </header>
+        <section>Moving the build-system used at citrix-online to the cloud</section>
+    </div>
+    <div class="slide step" id="goals" data-scale="1" data-x="1200" data-y="0" data-z="1000">
+        <header>
+            <h1>Agenda</h1>
+        </header>
+        <section>
+            <ul>
+                <li>Who am I</li>
+                <li>
+                    <dl>
+                        <dt>Citrix / Citrix Online</dt>
+                        <dd>
+                            <ul>
+                                <li>whats my job there</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Where did we start a year ago</dt>
+                        <dd>
+                            <ul>
+                                <li>30000 foot view of infrastructure</li>
+                                <li>pets versus cattle</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>infrastructure as code IAC</dt>
+                        <dd>
+                            <ul>
+                                <li>configuration as code</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>long term goals</li>
+            </ul>
+        </section>
+    </div>
+    <div class="slide step" id="me" data-scale="1" data-x="2400" data-y="0" data-z="1000">
+        <header>
+            <h1>Who am I</h1>
+        </header>
+        <section>
+            <p>Name: Thomas William (<a href="mailto:thomas.william@citrix.com">thomas.william@citrix.com</a>)</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>1992-1999</td>
+                        <td>Grammar school</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Gymnasium Coswig</td>
+                    </tr>
+                    <tr>
+                        <td>2000-2007</td>
+                        <td>Diploma student in computer science</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>TU Dresden</td>
+                    </tr>
+                    <tr>
+                        <td>2007-2015</td>
+                        <td>Software/Performance Analyst</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>GWT-TUD GmbH</td>
+                    </tr>
+                    <tr>
+                        <td>2015-</td>
+                        <td>Build Tools Engineer at Citrix Online</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Citrix Systems</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div class="slide step" id="mytopics" data-scale="1" data-x="3600" data-y="0" data-z="1000">
+        <header>
+            <h1>Field of work</h1>
+        </header>
+        <section>
+            <ul>
+                <li>Product manager for the performance analysis software Vampir</li>
+                <li>Performance analysis for the Indiana University</li>
+                <li>Principal investigator in a joint NIH-funded project <em>Trinity: Transcriptome assembly for genetic and functional analysis of cancer</em> with the Broad Institute</li>
+                <li>Lectures on <em>Linux Cluster in Theorie und Praxis</em> at the computer architectures chair at TU-Dresden</li>
+            </ul>
+        </section>
+    </div>
+    <div class="slide step" id="citrix" data-scale="1" data-x="4800" data-y="0" data-z="1000">
+        <header>
+            <h1>Citrix Systems, Inc.</h1>
+        </header>
+        <section>
+            <img align="right" alt="Citrix Logo" height="100px" src="img/CitrixLogoBlack.png" />
+            <ul>
+                <li>Founded 1989</li>
+                <li>Around 10k employees</li>
+                <li>~3 billion USD Revenue</li>
+                <li>
+                    <dl>
+                        <dt>Products:</dt>
+                        <dd>
+                            <ul>
+                                <li>Desktops and apps (see next slide)</li>
+                                <li>Desktop as a Service (DaaS)</li>
+                                <li>Software as a Service (SaaS)</li>
+                                <li>Networking (Netscalar) and cloud</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Citrix gave:</dt>
+                        <dd>
+                            <ul>
+                                <li>Cloudstack to the Apache Foundation</li>
+                                <li>Xen hypervisor to the Linux Foundation</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div class="slide step" id="citrix-apps" data-scale="1" data-x="6000" data-y="0" data-z="1000">
+        <header>
+            <h1>Desktops and apps</h1>
+        </header>
+        <section>
+            <img align="center" alt="Citrix Apps Logos" height="400px" src="img/CitrixLogos.png" />
+        </section>
+    </div>
+    <div class="slide step" id="dresden" data-scale="1" data-x="7200" data-y="0" data-z="1000">
+        <header>
+            <h1>RTC Platform Dresden</h1>
+        </header>
+        <section>
+            <ul>
+                <li>50+ people</li>
+                <li>2 groups</li>
+                <li>
+                    <dl>
+                        <dt>RTC Platform Dresden Group</dt>
+                        <dd>
+                            <ul>
+                                <li>RTC Endpoint Platform Team</li>
+                                <li>RTC Server Platform Team</li>
+                                <li>RTC Platform Shared Services Team</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Media Signal Processing Group</dt>
+                        <dd>
+                            <ul>
+                                <li>Video Processing Team</li>
+                                <li>Audio Signal Processing Team</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div class="step" id="dresden-team" data-scale="1" data-x="8400" data-y="0" data-z="1000">
+        <header>
+            <h1>Dresden Team Foto</h1>
+        </header>
+        <section>
+            <img align="right" alt="Dresden Team" height="600px" src="img/DresdenTeam.jpg" />
+        </section>
+    </div>
+    <div class="slide step" id="my-job" data-scale="1" data-x="0" data-y="800" data-z="1000">
+        <header>
+            <h1>My job at Citrix</h1>
+        </header>
+        <section>
+            <ul>
+                <li>
+                    <dl>
+                        <dt>I am part of the build tools management team (BTM)</dt>
+                        <dd>
+                            <ul>
+                                <li>2 Ger, 3 (India), 6 (USA)</li>
+                                <li>1 Director, 1 Architect, 1 Manager</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>We support Building, Packaging and Deploying End2End</dt>
+                        <dd>
+                            <ul>
+                                <li>Developer Application Management</li>
+                                <li>System / Infrastructure Administration</li>
+                                <li>Developer Support Tools</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div class="slide step" id="status" data-scale="1" data-x="1200" data-y="800" data-z="1000">
+        <header>
+            <h1>Status March 2015</h1>
+        </header>
+        <section>
+            <ul>
+                <li>2 different build and deploy systems</li>
+                <li>3 different SCM systems</li>
+                <li>4++ different code quality and code coverage systems</li>
+                <li>multiple different packaging and deployment workflows</li>
+            </ul>
+        </section>
+    </div>
+    <div class="slide step" id="application-management" data-scale="1" data-x="2400" data-y="800" data-z="1000">
+        <header>
+            <h1>Application Management</h1>
+        </header>
+        <section>
+            <ul>
+                <li>Bamboo</li>
+                <li>BuildForge</li>
+                <li>Jenkins</li>
+                <li>Artifactory</li>
+                <li>Clover</li>
+                <li>Confluence</li>
+                <li>Crowd</li>
+                <li>Crucible and FishEye</li>
+                <li>JIRA</li>
+                <li>Stash</li>
+                <li>Perforce</li>
+                <li>Sonar</li>
+            </ul>
+        </section>
+    </div>
+    <div class="slide step" id="system-infrastructure-administration" data-scale="1" data-x="3600" data-y="800" data-z="1000">
+        <header>
+            <h1>System / Infrastructure Administration</h1>
+        </header>
+        <section>
+            <ul>
+                <li>CloudStack</li>
+                <li>Windows/Unix/Mac build machines</li>
+                <li>Application servers</li>
+                <li>User managament for the applications</li>
+            </ul>
+        </section>
+    </div>
+    <div class="slide step" id="other-tools" data-scale="1" data-x="4800" data-y="800" data-z="1000">
+        <header>
+            <h1>Other Tools</h1>
+        </header>
+        <section>
+            <ul>
+                <li>BOM tool</li>
+                <li>Build Dependency Tool</li>
+                <li>uDeploy</li>
+                <li>Electric Cloud</li>
+                <li>PostgreSQL</li>
+                <li>Signing Module</li>
+                <li>Splunk</li>
+                <li>Zenoss</li>
+            </ul>
+        </section>
+    </div>
+    <div class="slide step" id="infrastructure-as-code-iac" data-scale="1" data-x="6000" data-y="800" data-z="1000">
+        <header>
+            <h1>Infrastructure as Code (IAC)</h1>
+        </header>
+        <section>
+            <dl>
+                <dt>Definition:</dt>
+                <dd>Infrastructure as Code (IAC) is a type of IT infrastructure that operations teams can automatically manage and provision through code, rather than using a manual process. Infrastructure as Code is sometimes referred to as programmable infrastructure.</dd>
+            </dl>
+        </section>
+    </div>
+    <div class="slide step" data-scale="1" data-x="7200" data-y="800" data-z="1000">
+        <section>
+            <ul>
+                <li>Concept of IAC is similar to programming scripts</li>
+                <li>IAC uses higher-level or descriptive language to code: - Versatile and adaptive provisioning - Deployment process(es)</li>
+                <li>IAC process closely resembles formal software design practices: - Developers carefully control code versions - Test code iterations - Limit deployment until the software is proven and approved for production</li>
+            </ul>
+        </section>
+    </div>
+    <div class="slide step" id="example" data-scale="1" data-x="8400" data-y="800" data-z="1000">
+        <header>
+            <h1>Example</h1>
+        </header>
+        <section>
+            <blockquote>
+                <p>Using Ansible (or Vagrant/Puppet/Chef/Salt...), an IT management and configuration tool, one could:</p>
+                <ul>
+                    <li>install MySQL server,</li>
+                    <li>verify that MySQL is running properly,</li>
+                    <li>create a user account and password,</li>
+                    <li>set up a new database and remove unneeded databases</li>
+                </ul>
+                <p>-&gt; all through code.</p>
+            </blockquote>
+        </section>
+    </div>
+    <div class="slide step" data-scale="1" data-x="0" data-y="1600" data-z="1000">
+        <section>
+            <p>Using code to provision and deploy servers and applications is particularly interesting to software developers:</p>
+            <ul>
+                <li>no dependency on system administrators to provision and manage the operations aspect of a DevOps environment</li>
+                <li>IAC process can provision and deploy a new application for quality assurance or experimental deployment</li>
+            </ul>
+        </section>
+    </div>
+    <div class="slide step" data-scale="1" data-x="1200" data-y="1600" data-z="1000">
+        <section>
+            <p>IAC also introduces potential disadvantages:</p>
+            <ul>
+                <li>IAC code development may require additional tools that could introduce learning curves and room for error</li>
+                <li>Errors in IAC code can proliferate quickly through servers</li>
+                <li>Monitoring/peer review for version control and comprehensive pre-release testing is mandatory</li>
+                <li>If administrators can change server configurations without changing IAC code: - Potential for configuration drift - Inconsistent configurations across data centers</li>
+            </ul>
+        </section>
+    </div>
+    <div class="slide step" data-scale="1" data-x="2400" data-y="1600" data-z="1000">
+        <section>
+            <p>It is therefor important to fully integrate IAC into:</p>
+            <ul>
+                <li>systems administration</li>
+                <li>IT operations</li>
+                <li>DevOps processes</li>
+                <li>with well-documented policies and procedures</li>
+            </ul>
+            <dl>
+                <dt>1, 2, automate</dt>
+                <dd>DevOps mantra meaning you should consider automating everything you envision to do more than 2 times in the foreseable future.</dd>
+            </dl>
+        </section>
+    </div>
+    <div class="slide step" id="iac-citrix" data-scale="1" data-x="3600" data-y="1600" data-z="1000">
+        <header>
+            <h1>IAC @ Citrix</h1>
+            <h2>IAC for the build environment</h2>
+            <h3>IAC for fully automated tests</h3>
+        </header>
+        <section>
+            <ul>
+                <li>New buildenvironment underway using jenkins for CI/CD</li>
+                <li>Artifactory as the central storage facility</li>
+                <li>Using Amazon Regions for DR</li>
+            </ul>
+            <ul>
+                <li>Cucumber</li>
+                <li>End2End Tests - show the RTC Gateway as an example (bamboo/jenkins jobs...)</li>
+                <li>Run books (example)</li>
+            </ul>
+        </section>
+    </div>
+    <div class="slide step" id="configuration-as-code" data-scale="1" data-x="4800" data-y="1600" data-z="1000">
+        <header>
+            <h1>configuration as code</h1>
+        </header>
+        <section>
+            <p>"Configuration as code" is a subset of the larger "infrastructure as code" concept:</p>
+            <ul>
+                <li>adding of virtualization to the management of your configurations</li>
+                <li>not just managing what's on your systems but also the existence of the systems themselves</li>
+            </ul>
+        </section>
+    </div>
+    <div class="slide step" data-scale="1" data-x="6000" data-y="1600" data-z="1000">
+        <section>
+            <p>What does treating "config as code" mean in a pracital sens?</p>
+            <ul>
+                <li>Configuration is code;</li>
+                <li>Apache config file(s) is/are basically a programming environment already</li>
+            </ul>
+            <p>What that means is using (good) practices common to the world of a programmer.</p>
+        </section>
+    </div>
+    <div class="slide step" id="revision-control-and-deployment" data-scale="1" data-x="7200" data-y="1600" data-z="1000">
+        <header>
+            <h1>revision control and deployment</h1>
+        </header>
+        <section>
+            <ul>
+                <li>As "code" you manage it in a version control system, then you compile and deploy it out to a target system</li>
+                <li>As "config" you edit configs in place on a system</li>
+            </ul>
+        </section>
+    </div>
+    <div class="slide step" id="tests" data-scale="1" data-x="8400" data-y="1600" data-z="1000">
+        <header>
+            <h1>tests</h1>
+        </header>
+        <section>
+            <ul>
+                <li>Make it testable</li>
+                <li>regression, unit, integration, load, security...</li>
+                <li>Monitoring</li>
+                <li>Development and test environments</li>
+            </ul>
+        </section>
+    </div>
+    <div class="slide step" id="continuous-integration-continuous-deploy" data-scale="1" data-x="0" data-y="2400" data-z="1000">
+        <header>
+            <h1>continuous integration/continuous deploy</h1>
+        </header>
+        <section>
+            <ul>
+                <li>
+                    <dl>
+                        <dt>Follow a process</dt>
+                        <dd>
+                            <ul>
+                                <li>simple: design/code/test/deploy/maintain</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>This can include more complex steps:</dt>
+                        <dd>
+                            <ul>
+                                <li>modeling</li>
+                                <li>automated code validation</li>
+                                <li>defect tracking</li>
+                                <li>code reviews</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div class="overview step" data-scale="8" data-x="4800" data-y="0" id="overview" data-z="1000">
+        <section>text of overview slide not shown</section>
+    </div>
+</div>
+
+<div id="progressbar"><div></div></div>
+</body>
+</html>
