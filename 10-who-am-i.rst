@@ -4,7 +4,9 @@
 Who am I
 ========
 
-Name: Thomas William (thomas.william@citrix.com)
+Name: Thomas William
+
+EMail: thomas[dot]william[at]citrix[dot]com
 
 +-----------+------------------------------------------------------+
 | 1992-1999 | Grammar school 									   |
