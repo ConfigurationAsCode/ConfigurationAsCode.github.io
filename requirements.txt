@@ -1,0 +1,3 @@
+rst2html5==1.4
+rst2html5slides
+
