@@ -14,5 +14,5 @@ rst2html5slides --traceback --strict --tab-width=4\
             slides.rst slides.html
 
 #tidy -utf8 -i -o slides-tidy.html slides.html
-open -a "Google Chrome"  slides.html
+open -a "Safari"  slides.html
 

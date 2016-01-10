@@ -30,8 +30,8 @@ EMail: thomas[dot]william[at]citrix[dot]com
 :id: mytopics
 :class: slide
 
-Field of work
-=============
+Prior field of work
+===================
 
 - Product manager for the performance analysis software Vampir
 - Performance analysis for the Indiana University

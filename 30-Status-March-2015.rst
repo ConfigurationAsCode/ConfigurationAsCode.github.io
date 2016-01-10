@@ -4,7 +4,7 @@
 Status March 2015
 =================
 
-- 2 different build and deploy systems
+- 3 different build and deploy systems
 - 3 different SCM systems
 - 4++ different code quality and code coverage systems
 - multiple different packaging and deployment workflows
@@ -52,4 +52,130 @@ Other Tools
 - Signing Module
 - Splunk
 - Zenoss
+
+:class: slide
+:id: machines1
+
+Machines managed manually 1/2
+=============================
+
+.. image:: img/MachineInfo.png
+   :height: 500px
+   :alt: Wiki-page for machine info
+   :align: center
+
+:class: slide
+:id: machines2
+
+Machines managed manually 2/2
+=============================
+
+- Machines managed manually with ssh/scripts/build-plans
+- Congifurations differ between machines
+- Buildplans therefor have to be tied to certain machines
+- No equal load distribution
+- Crash of single machine may block a plan/team
+
+-> "Pets vs. Cattle"
+
+:class: slide
+
+Workflows span multiple systems
+===============================
+
+- Bamboo plan to build binaries from sources
+	- Creates RPMs, stores them in NFS share
+	- Triggers child plans
+- Bamboo childplan using bash scripts to:
+	- Upload rpms to Artifactory
+	- Trigger docker container creation in Jenkins
+	- Trigger end2end tests in test environment using Cucumber (Bamboo-plan)
+- Jenkins plan that builds docker containers
+	- Containers are stored in Artifactory
+
+
+:class: slide
+:id: RTCGW-Bamboo1
+
+Bamboo plan: RTCGW RPM build
+============================
+
+.. image:: img/PlaceHolder.png
+   :height: 400px
+   :alt: PlaceHolder
+   :align: center
+
+:class: slide
+:id: RTCGW-Bamboo1b
+
+Bamboo Child plans
+==================
+
+.. image:: img/Gateway-Bamboo-Childs.png
+   :height: 400px
+   :alt: PlaceHolder
+   :align: center
+
+:class: slide
+:id: RTCGW-Bamboo2
+
+Bamboo plan: RTCGW RPM upload
+=============================
+
+.. image:: img/PlaceHolder.png
+   :height: 400px
+   :alt: PlaceHolder
+   :align: center
+
+:class: slide
+:id: RTCGW-Artifactory
+
+Artifact store for RPMs
+=======================
+
+.. image:: img/Gateway-Artifactory-RPMs.png
+   :height: 400px
+   :alt: Artifactory
+   :align: center
+
+:class: slide
+:id: RTCGW-Bamboo3
+
+Bamboo plan: RTCGW Testdeploy
+=============================
+
+.. image:: img/Gateway-Bamboo-Deploy.png
+   :height: 400px
+   :alt: PlaceHolder
+   :align: center
+
+:class: slide
+:id: RTCGW-Jenkins1
+
+Jenkins plan: RTCGW container
+=============================
+
+.. image:: img/Gateway-Jenkins-Container.png
+   :height: 400px
+   :alt: Docker Container Creation
+   :align: center
+
+:class: slide
+:id: RTCGW-Links
+
+RTC Gateway Link-List
+=====================
+
+- RTCGW-Bamboo-Build_
+- RTCGW-Bamboo-Upload_
+- RTCGW-Bamboo-Deploy_
+- RTCGW-Artifactory_
+- RTCGW-Jenkins-Container-Creation_
+
+.. _RTCGW-Bamboo-Build: https://bamboo.ops.expertcity.com/browse/
+.. _RTCGW-Bamboo-Upload: https://bamboo.ops.expertcity.com/browse/RTC-RGC
+.. _RTCGW-Bamboo-Deploy: https://bamboo.ops.expertcity.com/browse/
+.. _RTCGW-Artifactory: https://artifactory.prodwest.citrixsaassbe.net/artifactory/webapp/#/artifacts/browse/tree/General/bamboo-artefacts/rtc/gw/master
+.. _RTCGW-Jenkins-Container-Creation: https://jenkins1.prodwest.citrixsaassbe.net/jenkins/job/Platform/job/RTC/job/Gateway/job/docker_image_creation/
+
 

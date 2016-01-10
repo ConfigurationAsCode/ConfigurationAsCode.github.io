@@ -1,5 +1,4 @@
 $(function() {
-//    $('#jmpress').jmpress();
     $('#jmpress').jmpress({
         viewPort: {
             height: 800,
@@ -10,7 +9,7 @@ $(function() {
         },
         start: '#title',
         hash: {
-            use: false,
+            use: true,
             update: false,
             bindChange: false
         },
@@ -23,20 +22,6 @@ $(function() {
             }
         }
     });
-
-/*
-    $('#jmpress').jmpress({
-
-        animation: {
-            transformOrigin: 'center center', // Point on which to transform (unused)
-            transitionDuration: '5s',         // Length of animation
-            transitionDelay: '500ms',         // Delay before animating
-            transitionTimingFunction: 'ease'  // Animation effect
-        },
-        transitionDuration: 5000 // Set this according to animation.transitionDuration
-                                 // It is used for setting the timeout for the transition
-    });
-*/
 
 });
 

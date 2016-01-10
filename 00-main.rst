@@ -28,13 +28,13 @@ Agenda
 
 - Who am I
 - Citrix / Citrix Online	
-	- whats my job there
+	- What is my job there
 - Where did we start a year ago
 	- 30000 foot view of infrastructure
-	- pets versus cattle
-- infrastructure as code IAC
-	- configuration as code
-- long term goals
+- New Approach
+	- Secure Build Environment
+	- Infrastructure as code
+	- Configuration as code
 
 ----
 
