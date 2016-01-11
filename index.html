@@ -792,8 +792,6 @@ rm -f slides.rst</code></pre>
             <pre><code class="bash"><span class="c"># create-sources.sh:
 #!/bin/bash
 </span>
-<span class="nb">cd</span> <span class="s2">"</span><span class="si">${</span><span class="nv">0</span><span class="p">%/*</span><span class="si">}</span><span class="s2">"</span>
-
 pygmentize <span class="o">()</span> <span class="o">{</span>
     <span class="nv">FILE</span><span class="o">=</span><span class="nv">$1</span>
     <span class="nv">CODE</span><span class="o">=</span><span class="nv">$2</span>
@@ -808,7 +806,8 @@ pygmentize <span class="o">()</span> <span class="o">{</span>
 pygmentize .travis.yml yaml
 pygmentize make.sh bash
 pygmentize create-sources.sh bash
-pygmentize deploy.sh bash</code></pre>
+pygmentize deploy.sh bash
+pygmentize requirements.txt bash</code></pre>
         </section>
     </div>
     <div class="slide highlight step" id="commit-index-html-to-github" data-scale="1" data-x="7200" data-y="4000" data-z="1000">
