@@ -15,19 +15,20 @@ Status March 2015
 Application Management
 ======================
 
-- Bamboo
-- BuildForge
-- Jenkins
-- Artifactory
-- Clover
-- Confluence
-- Crowd
-- Crucible and FishEye
-- JIRA
-- Stash
-- Perforce
-- Sonar
-
+- Bamboo (build & deploy)
+- BuildForge (build & deploy)
+- Jenkins (build & deploy)
+- Artifactory (artifact store)
+- Clover (code coverage)
+- Confluence (wiki)
+- Crowd (user mgmt)
+- Crucible and FishEye (code review)
+- JIRA (ticket/project mgmt)
+- Stash (SCM)
+- Perforce (SCM)
+- Sonar (source quality mgmt)
+- Splunk (logs)
+- Zenoss (monitoring)
 
 :class: slide
 
@@ -37,7 +38,7 @@ System / Infrastructure Administration
 - CloudStack
 - Windows/Unix/Mac build machines
 - Application servers
-- User managament for the applications
+- User management for the applications
 
 :class: slide
 
@@ -50,13 +51,11 @@ Other Tools
 - Electric Cloud
 - PostgreSQL
 - Signing Module
-- Splunk
-- Zenoss
 
 :class: slide
 :id: machines1
 
-Machines managed manually 1/2
+Machines Managed Manually 1/2
 =============================
 
 .. image:: img/MachineInfo.png
@@ -67,11 +66,11 @@ Machines managed manually 1/2
 :class: slide
 :id: machines2
 
-Machines managed manually 2/2
+Machines Managed Manually 2/2
 =============================
 
 - Machines managed manually with ssh/scripts/build-plans
-- Congifurations differ between machines
+- Congigurations differ between machines
 - Buildplans therefor have to be tied to certain machines
 - No equal load distribution
 - Crash of single machine may block a plan/team
@@ -80,8 +79,8 @@ Machines managed manually 2/2
 
 :class: slide
 
-Workflows span multiple systems
-===============================
+Workflows Span Multiple Systems (Example)
+=========================================
 
 - Bamboo plan to build binaries from sources
 	- Creates RPMs, stores them in NFS share
@@ -97,40 +96,51 @@ Workflows span multiple systems
 :class: slide
 :id: RTCGW-Bamboo1
 
-Bamboo plan: RTCGW RPM build
+Bamboo Plan: RTCGW RPM Build
 ============================
 
-.. image:: img/PlaceHolder.png
+.. image:: img/Gateway-Bamboo.png
    :height: 400px
-   :alt: PlaceHolder
+   :alt: Gateway Project Plan
+   :align: center
+
+:class: slide
+:id: RTCGW-Bamboo1a
+
+Bamboo Plan Configuration
+=========================
+
+.. image:: img/Gateway-Bamboo-Config.png
+   :height: 400px
+   :alt: Gateway Project Plan Configuration
    :align: center
 
 :class: slide
 :id: RTCGW-Bamboo1b
 
-Bamboo Child plans
+Bamboo Child Plans
 ==================
 
 .. image:: img/Gateway-Bamboo-Childs.png
    :height: 400px
-   :alt: PlaceHolder
+   :alt: Child Plans
    :align: center
 
 :class: slide
 :id: RTCGW-Bamboo2
 
-Bamboo plan: RTCGW RPM upload
+Bamboo Plan: RTCGW RPM Upload
 =============================
 
-.. image:: img/PlaceHolder.png
+.. image:: img/Gateway-Bamboo-Docker.png
    :height: 400px
-   :alt: PlaceHolder
+   :alt: Upload and Container trigger plan
    :align: center
 
 :class: slide
 :id: RTCGW-Artifactory
 
-Artifact store for RPMs
+Artifact Store For RPMs
 =======================
 
 .. image:: img/Gateway-Artifactory-RPMs.png
@@ -139,20 +149,9 @@ Artifact store for RPMs
    :align: center
 
 :class: slide
-:id: RTCGW-Bamboo3
-
-Bamboo plan: RTCGW Testdeploy
-=============================
-
-.. image:: img/Gateway-Bamboo-Deploy.png
-   :height: 400px
-   :alt: PlaceHolder
-   :align: center
-
-:class: slide
 :id: RTCGW-Jenkins1
 
-Jenkins plan: RTCGW container
+Jenkins Plan: RTCGW Container
 =============================
 
 .. image:: img/Gateway-Jenkins-Container.png
@@ -161,21 +160,14 @@ Jenkins plan: RTCGW container
    :align: center
 
 :class: slide
-:id: RTCGW-Links
+:id: RTCGW-Bamboo3
 
-RTC Gateway Link-List
-=====================
+Bamboo Plan: RTCGW Testdeploy
+=============================
 
-- RTCGW-Bamboo-Build_
-- RTCGW-Bamboo-Upload_
-- RTCGW-Bamboo-Deploy_
-- RTCGW-Artifactory_
-- RTCGW-Jenkins-Container-Creation_
-
-.. _RTCGW-Bamboo-Build: https://bamboo.ops.expertcity.com/browse/
-.. _RTCGW-Bamboo-Upload: https://bamboo.ops.expertcity.com/browse/RTC-RGC
-.. _RTCGW-Bamboo-Deploy: https://bamboo.ops.expertcity.com/browse/
-.. _RTCGW-Artifactory: https://artifactory.prodwest.citrixsaassbe.net/artifactory/webapp/#/artifacts/browse/tree/General/bamboo-artefacts/rtc/gw/master
-.. _RTCGW-Jenkins-Container-Creation: https://jenkins1.prodwest.citrixsaassbe.net/jenkins/job/Platform/job/RTC/job/Gateway/job/docker_image_creation/
+.. image:: img/Gateway-Bamboo-Deploy.png
+   :height: 400px
+   :alt: PlaceHolder
+   :align: center
 
 

@@ -1,7 +1,7 @@
 
 :class: slide
 
-The new approach
+The New Approach
 ================
 
 - In 2014, evaluation and decision to reboot build infrastructure
@@ -9,7 +9,7 @@ The new approach
 - Move everything to the cloud (AWS for now)
 - Consolidate tools zoo
 - Identify common workflow patterns
-	- only those will get official support
+- Only common patterns will get official support
 
 :class: slide
 

@@ -1,7 +1,7 @@
 
 :class: slide
 
-Infrastructure as Code (IAC)
+Infrastructure As Code (IAC)
 ============================
 
 **Definition:**
@@ -37,7 +37,7 @@ Using Ansible (or Vagrant/Puppet/Chef/Salt...), an IT management and configurati
 
 Using code to provision and deploy servers and applications is particularly interesting to software developers:
 
-- no dependency on system administrators to provision and manage the operations aspect of a DevOps environment
+- No dependency on system administrators to provision and manage the operations aspect of a DevOps environment
 - IAC process can provision and deploy a new application for quality assurance or experimental deployment
 
 :class: slide
@@ -57,10 +57,10 @@ IAC also introduces potential disadvantages:
 
 It is therefor important to fully integrate IAC into:
 
-- systems administration
+- Systems administration
 - IT operations
 - DevOps processes
-- with well-documented policies and procedures
+- With well-documented policies and procedures
 
 **1, 2, automate**
   DevOps mantra meaning you should consider automating everything you envision to do more than 2 times in the foreseable future.
@@ -83,7 +83,7 @@ Jenkins Deploys Jenkins
 =======================
 
 .. image:: img/JenkinsDeployJenkins.png
-   :height: 400px
+   :height: 300px
    :alt: Jenkins deploys Jenkins
    :align: center
 

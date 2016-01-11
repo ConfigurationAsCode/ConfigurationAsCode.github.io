@@ -64,10 +64,10 @@ Dresden Team Foto
 My job at Citrix
 ================
 
-- I am part of the build tools management team (BTM)
+- I'm part of the build tools management team (BTM)
 	- 2 Ger, 3 (India), 6 (USA)
 	- 1 Director, 1 Architect, 1 Manager 
-- We support Building, Packaging and Deploying End2End
+- We support Building, Packaging and Deploying
 	- Developer Application Management
 	- System / Infrastructure Administration
 	- Developer Support Tools

@@ -1,0 +1,17 @@
+.. code:: yaml
+    
+    # .travis.yml:
+    language:
+        - python
+    python:
+        - "3.5"
+    install:
+        - pip install -r requirements.txt
+    script:
+        - bash make.sh
+    after_success:
+        - bash deploy.sh
+    env:
+        global:
+            - secure: "HkI0NJy4XDHC/7HMhjkLUW/dJYOi8irePyPHRRu2yQXbx2n7+zGjXFRsfQLjgEtorOyVJMhmW/4wKG62x
+    

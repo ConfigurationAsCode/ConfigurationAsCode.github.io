@@ -8,7 +8,8 @@ git init
 git config user.name "Thomas William"
 git config user.email "thomas.william@citrix.com"
 
-git remote add upstream "https://$GH_TOKEN@github.com/ConfigurationAsCode/ConfigurationAsCode.github.io.git"
+git remote add upstream \
+    "https://$GH_TOKEN@github.com/ConfigurationAsCode/ConfigurationAsCode.github.io.git"
 git fetch upstream
 git reset upstream/master
 

@@ -1,18 +1,18 @@
 :class: slide
 
-configuration as code
+Configuration As Code
 =====================
 
 "Configuration as code" is a subset of the larger "infrastructure as code" concept:
 
-- adding of virtualization to the management of your configurations
-- not just managing what's on your systems but also the existence of the systems themselves
+- Adding of virtualization to the management of your configurations
+- Not just managing what's on your systems but also the existence of the systems themselves
 
 :class: slide
 
-What does treating "config as code" mean in a pracital sense?  
+What does treating "configuration as code" mean in a pracital sense?  
 
-- Configuration is code;
+- Configuration often !is! code;
 - Apache config file(s) is/are basically a programming environment already
  
 What that means is using (good) practices common to the world of a programmer.
@@ -20,7 +20,7 @@ What that means is using (good) practices common to the world of a programmer.
 
 :class: slide
 
-revision control and deployment
+Revision Control And Deployment
 ===============================
 
 - As "code" you manage it in a version control system, then you compile and deploy it out to a target system
@@ -29,7 +29,7 @@ revision control and deployment
 
 :class: slide
 
-tests
+Tests
 =====
 
 - Make it testable
@@ -39,21 +39,21 @@ tests
 
 :class: slide
 
-continuous integration/continuous deploy
+Continuous Integration/Continuous Deploy
 ========================================
 
 - Follow a process
-	- simple: design/code/test/deploy/maintain
+	- Simple: design/code/test/deploy/maintain
 - This can include more complex steps:
-	- modeling
-	- automated code validation
-	- defect tracking
-	- code reviews
+	- Modeling
+	- Automated code validation
+	- Defect tracking
+	- Code reviews
 
 :class: slide
 
-Example: this talk ;-)
-======================
+Simple Example: This Talk
+=========================
 - Written in ReStructuredText
 - Converted to HTML5
 - Stored on Github
@@ -79,6 +79,32 @@ GitHub Repo
    :alt: GitHub Repo View
    :align: center
 
+:class: slide highlight
+
+Travis CI configuration
+=======================
+
+.. include:: src/.travis.yml
+
+.. include:: src/requirements.txt
+
+
+:class: slide highlight
+
+Create index.html
+=================
+
+.. include:: src/make.sh
+
+.. include:: src/create-sources.sh
+
+:class: slide highlight
+
+Commit index.html To GitHub
+===========================
+
+.. include:: src/deploy.sh
+
 :class: slide
 
 Travis CI
@@ -95,7 +121,7 @@ CAS @ Citrix 1/2
 ================
 
 - The build plans to create the docker images are create by jenkins jobs
-	- Dependency graphs is built by parsing Dockerfiles
+	- Dependency graphs are built by parsing Dockerfiles
 	- Plans trigger each other in right order
 	- Change to base layer invokes rebuilt of upper layers
 	- Configuration is completely stored in git repository
@@ -106,7 +132,7 @@ CAS @ Citrix 1/2
 CAS @ Citrix 2/2
 ================
 
-- To create a new docker image in Artifactor/Jenkins:
+- To create a new docker image in Artifactory/Jenkins:
 	- commit/push Dockerfile to git repository
 	- *CreateAllSlaveImages* plan gets triggered by code change
 	- *CreateAllSlaveImages* parses Dockerfile and triggers *CreateSlaveContainerProject* with Parameters
@@ -114,7 +140,7 @@ CAS @ Citrix 2/2
 
 :class: slide
 
-One Plan for each Dockerfile
+One Plan For Each Dockerfile
 ============================
 
 .. image:: img/JeninsPlanCreation.png
@@ -125,13 +151,14 @@ One Plan for each Dockerfile
 
 :class: slide
 
-Live Demo of Jenkinsfile feature
-================================
+Live Demo Of Jenkins
+====================
 - The configuration of a plan changes with the sourcecode
-	- if you add android capabilities to your code, you will need to change your build plan to built for android
-- if you need to apply a hotfix for an old version, your changed build-plan will not work with the old source code base
+- Adding endpoints (capabilities) to your code, you will need to change your build as well
+- If you need to apply a hotfix for an old version, your changed build-plan will not work with the old source code base
+- Your build machines may have changed (newer compiler versions etc.)
 
--> solution is to save build plan alongside with the source code: *Jenkinsfile*
+-> Solution is to save build plan (and requirements) alongside with the source code: *Jenkinsfile*
 
 
 

@@ -4,6 +4,8 @@ cd "${0%/*}"
 
 . ~/Software/virtualenvs/rst/bin/activate
 
+. ./create-sources.sh
+
 rm -f slides.rst
 
 cat *.rst >>slides.rst

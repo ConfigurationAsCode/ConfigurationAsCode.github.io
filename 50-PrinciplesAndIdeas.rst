@@ -1,7 +1,7 @@
 
 :class: slide
 
-What is the SBE in AWS?
+What Is The SBE In AWS?
 =======================
 
 * **SBE**: Secure Build Environment
