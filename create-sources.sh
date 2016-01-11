@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd "${0%/*}"
-
 pygmentize () {
 	FILE=$1
 	CODE=$2
@@ -18,3 +16,4 @@ pygmentize make.sh bash
 pygmentize create-sources.sh bash
 pygmentize deploy.sh bash
 pygmentize requirements.txt bash
+
