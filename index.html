@@ -7,6 +7,7 @@
 
 
     <link href="css/simple.css" rel="stylesheet" type="text/css" />
+    <link href="css/highlight.css" rel="stylesheet" type="text/css" />
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/jmpress.js"></script>
@@ -216,7 +217,7 @@
             <ul>
                 <li>
                     <dl>
-                        <dt>I am part of the build tools management team (BTM)</dt>
+                        <dt>I'm part of the build tools management team (BTM)</dt>
                         <dd>
                             <ul>
                                 <li>2 Ger, 3 (India), 6 (USA)</li>
@@ -227,7 +228,7 @@
                 </li>
                 <li>
                     <dl>
-                        <dt>We support Building, Packaging and Deploying End2End</dt>
+                        <dt>We support Building, Packaging and Deploying</dt>
                         <dd>
                             <ul>
                                 <li>Developer Application Management</li>
@@ -259,18 +260,20 @@
         </header>
         <section>
             <ul>
-                <li>Bamboo</li>
-                <li>BuildForge</li>
-                <li>Jenkins</li>
-                <li>Artifactory</li>
-                <li>Clover</li>
-                <li>Confluence</li>
-                <li>Crowd</li>
-                <li>Crucible and FishEye</li>
-                <li>JIRA</li>
-                <li>Stash</li>
-                <li>Perforce</li>
-                <li>Sonar</li>
+                <li>Bamboo (build &amp; deploy)</li>
+                <li>BuildForge (build &amp; deploy)</li>
+                <li>Jenkins (build &amp; deploy)</li>
+                <li>Artifactory (artifact store)</li>
+                <li>Clover (code coverage)</li>
+                <li>Confluence (wiki)</li>
+                <li>Crowd (user mgmt)</li>
+                <li>Crucible and FishEye (code review)</li>
+                <li>JIRA (ticket/project mgmt)</li>
+                <li>Stash (SCM)</li>
+                <li>Perforce (SCM)</li>
+                <li>Sonar (source quality mgmt)</li>
+                <li>Splunk (logs)</li>
+                <li>Zenoss (monitoring)</li>
             </ul>
         </section>
     </div>
@@ -283,7 +286,7 @@
                 <li>CloudStack</li>
                 <li>Windows/Unix/Mac build machines</li>
                 <li>Application servers</li>
-                <li>User managament for the applications</li>
+                <li>User management for the applications</li>
             </ul>
         </section>
     </div>
@@ -299,14 +302,12 @@
                 <li>Electric Cloud</li>
                 <li>PostgreSQL</li>
                 <li>Signing Module</li>
-                <li>Splunk</li>
-                <li>Zenoss</li>
             </ul>
         </section>
     </div>
     <div class="slide step" id="machines1" data-scale="1" data-x="6000" data-y="800" data-z="1000">
         <header>
-            <h1>Machines managed manually 1/2</h1>
+            <h1>Machines Managed Manually 1/2</h1>
         </header>
         <section>
             <img align="center" alt="Wiki-page for machine info" height="500px" src="img/MachineInfo.png" />
@@ -314,12 +315,12 @@
     </div>
     <div class="slide step" id="machines2" data-scale="1" data-x="7200" data-y="800" data-z="1000">
         <header>
-            <h1>Machines managed manually 2/2</h1>
+            <h1>Machines Managed Manually 2/2</h1>
         </header>
         <section>
             <ul>
                 <li>Machines managed manually with ssh/scripts/build-plans</li>
-                <li>Congifurations differ between machines</li>
+                <li>Congigurations differ between machines</li>
                 <li>Buildplans therefor have to be tied to certain machines</li>
                 <li>No equal load distribution</li>
                 <li>Crash of single machine may block a plan/team</li>
@@ -327,9 +328,9 @@
             <p>-&gt; "Pets vs. Cattle"</p>
         </section>
     </div>
-    <div class="slide step" id="workflows-span-multiple-systems" data-scale="1" data-x="8400" data-y="800" data-z="1000">
+    <div class="slide step" id="workflows-span-multiple-systems-example" data-scale="1" data-x="8400" data-y="800" data-z="1000">
         <header>
-            <h1>Workflows span multiple systems</h1>
+            <h1>Workflows Span Multiple Systems (Example)</h1>
         </header>
         <section>
             <ul>
@@ -371,69 +372,63 @@
     </div>
     <div class="slide step" id="RTCGW-Bamboo1" data-scale="1" data-x="0" data-y="1600" data-z="1000">
         <header>
-            <h1>Bamboo plan: RTCGW RPM build</h1>
+            <h1>Bamboo Plan: RTCGW RPM Build</h1>
         </header>
         <section>
-            <img align="center" alt="PlaceHolder" height="400px" src="img/PlaceHolder.png" />
+            <img align="center" alt="Gateway Project Plan" height="400px" src="img/Gateway-Bamboo.png" />
         </section>
     </div>
-    <div class="slide step" id="RTCGW-Bamboo1b" data-scale="1" data-x="1200" data-y="1600" data-z="1000">
+    <div class="slide step" id="RTCGW-Bamboo1a" data-scale="1" data-x="1200" data-y="1600" data-z="1000">
         <header>
-            <h1>Bamboo Child plans</h1>
+            <h1>Bamboo Plan Configuration</h1>
         </header>
         <section>
-            <img align="center" alt="PlaceHolder" height="400px" src="img/Gateway-Bamboo-Childs.png" />
+            <img align="center" alt="Gateway Project Plan Configuration" height="400px" src="img/Gateway-Bamboo-Config.png" />
         </section>
     </div>
-    <div class="slide step" id="RTCGW-Bamboo2" data-scale="1" data-x="2400" data-y="1600" data-z="1000">
+    <div class="slide step" id="RTCGW-Bamboo1b" data-scale="1" data-x="2400" data-y="1600" data-z="1000">
         <header>
-            <h1>Bamboo plan: RTCGW RPM upload</h1>
+            <h1>Bamboo Child Plans</h1>
         </header>
         <section>
-            <img align="center" alt="PlaceHolder" height="400px" src="img/PlaceHolder.png" />
+            <img align="center" alt="Child Plans" height="400px" src="img/Gateway-Bamboo-Childs.png" />
         </section>
     </div>
-    <div class="slide step" id="RTCGW-Artifactory" data-scale="1" data-x="3600" data-y="1600" data-z="1000">
+    <div class="slide step" id="RTCGW-Bamboo2" data-scale="1" data-x="3600" data-y="1600" data-z="1000">
         <header>
-            <h1>Artifact store for RPMs</h1>
+            <h1>Bamboo Plan: RTCGW RPM Upload</h1>
+        </header>
+        <section>
+            <img align="center" alt="Upload and Container trigger plan" height="400px" src="img/Gateway-Bamboo-Docker.png" />
+        </section>
+    </div>
+    <div class="slide step" id="RTCGW-Artifactory" data-scale="1" data-x="4800" data-y="1600" data-z="1000">
+        <header>
+            <h1>Artifact Store For RPMs</h1>
         </header>
         <section>
             <img align="center" alt="Artifactory" height="400px" src="img/Gateway-Artifactory-RPMs.png" />
         </section>
     </div>
-    <div class="slide step" id="RTCGW-Bamboo3" data-scale="1" data-x="4800" data-y="1600" data-z="1000">
-        <header>
-            <h1>Bamboo plan: RTCGW Testdeploy</h1>
-        </header>
-        <section>
-            <img align="center" alt="PlaceHolder" height="400px" src="img/Gateway-Bamboo-Deploy.png" />
-        </section>
-    </div>
     <div class="slide step" id="RTCGW-Jenkins1" data-scale="1" data-x="6000" data-y="1600" data-z="1000">
         <header>
-            <h1>Jenkins plan: RTCGW container</h1>
+            <h1>Jenkins Plan: RTCGW Container</h1>
         </header>
         <section>
             <img align="center" alt="Docker Container Creation" height="400px" src="img/Gateway-Jenkins-Container.png" />
         </section>
     </div>
-    <div class="slide step" id="RTCGW-Links" data-scale="1" data-x="7200" data-y="1600" data-z="1000">
+    <div class="slide step" id="RTCGW-Bamboo3" data-scale="1" data-x="7200" data-y="1600" data-z="1000">
         <header>
-            <h1>RTC Gateway Link-List</h1>
+            <h1>Bamboo Plan: RTCGW Testdeploy</h1>
         </header>
         <section>
-            <ul>
-                <li><a href="https://bamboo.ops.expertcity.com/browse/">RTCGW-Bamboo-Build</a></li>
-                <li><a href="https://bamboo.ops.expertcity.com/browse/RTC-RGC">RTCGW-Bamboo-Upload</a></li>
-                <li><a href="https://bamboo.ops.expertcity.com/browse/">RTCGW-Bamboo-Deploy</a></li>
-                <li><a href="https://artifactory.prodwest.citrixsaassbe.net/artifactory/webapp/#/artifacts/browse/tree/General/bamboo-artefacts/rtc/gw/master">RTCGW-Artifactory</a></li>
-                <li><a href="https://jenkins1.prodwest.citrixsaassbe.net/jenkins/job/Platform/job/RTC/job/Gateway/job/docker_image_creation/">RTCGW-Jenkins-Container-Creation</a></li>
-            </ul>
+            <img align="center" alt="PlaceHolder" height="400px" src="img/Gateway-Bamboo-Deploy.png" />
         </section>
     </div>
     <div class="slide step" id="the-new-approach" data-scale="1" data-x="8400" data-y="1600" data-z="1000">
         <header>
-            <h1>The new approach</h1>
+            <h1>The New Approach</h1>
         </header>
         <section>
             <ul>
@@ -441,16 +436,8 @@
                 <li>A New Director and Principle Architect were hired</li>
                 <li>Move everything to the cloud (AWS for now)</li>
                 <li>Consolidate tools zoo</li>
-                <li>
-                    <dl>
-                        <dt>Identify common workflow patterns</dt>
-                        <dd>
-                            <ul>
-                                <li>only those will get official support</li>
-                            </ul>
-                        </dd>
-                    </dl>
-                </li>
+                <li>Identify common workflow patterns</li>
+                <li>Only common patterns will get official support</li>
             </ul>
         </section>
     </div>
@@ -467,7 +454,7 @@
     </div>
     <div class="slide step" id="what-is-the-sbe-in-aws" data-scale="1" data-x="1200" data-y="2400" data-z="1000">
         <header>
-            <h1>What is the SBE in AWS?</h1>
+            <h1>What Is The SBE In AWS?</h1>
         </header>
         <section>
             <ul>
@@ -510,7 +497,7 @@
     </div>
     <div class="slide step" id="infrastructure-as-code-iac" data-scale="1" data-x="4800" data-y="2400" data-z="1000">
         <header>
-            <h1>Infrastructure as Code (IAC)</h1>
+            <h1>Infrastructure As Code (IAC)</h1>
         </header>
         <section>
             <dl>
@@ -568,7 +555,7 @@
         <section>
             <p>Using code to provision and deploy servers and applications is particularly interesting to software developers:</p>
             <ul>
-                <li>no dependency on system administrators to provision and manage the operations aspect of a DevOps environment</li>
+                <li>No dependency on system administrators to provision and manage the operations aspect of a DevOps environment</li>
                 <li>IAC process can provision and deploy a new application for quality assurance or experimental deployment</li>
             </ul>
         </section>
@@ -598,10 +585,10 @@
         <section>
             <p>It is therefor important to fully integrate IAC into:</p>
             <ul>
-                <li>systems administration</li>
+                <li>Systems administration</li>
                 <li>IT operations</li>
                 <li>DevOps processes</li>
-                <li>with well-documented policies and procedures</li>
+                <li>With well-documented policies and procedures</li>
             </ul>
             <dl>
                 <dt><strong>1, 2, automate</strong></dt>
@@ -645,7 +632,7 @@
             <h1>Jenkins Deploys Jenkins</h1>
         </header>
         <section>
-            <img align="center" alt="Jenkins deploys Jenkins" height="400px" src="img/JenkinsDeployJenkins.png" />
+            <img align="center" alt="Jenkins deploys Jenkins" height="300px" src="img/JenkinsDeployJenkins.png" />
         </section>
     </div>
     <div class="slide step" id="docker-image-creation" data-scale="1" data-x="4800" data-y="3200" data-z="1000">
@@ -658,21 +645,21 @@
     </div>
     <div class="slide step" id="configuration-as-code" data-scale="1" data-x="6000" data-y="3200" data-z="1000">
         <header>
-            <h1>configuration as code</h1>
+            <h1>Configuration As Code</h1>
         </header>
         <section>
             <p>"Configuration as code" is a subset of the larger "infrastructure as code" concept:</p>
             <ul>
-                <li>adding of virtualization to the management of your configurations</li>
-                <li>not just managing what's on your systems but also the existence of the systems themselves</li>
+                <li>Adding of virtualization to the management of your configurations</li>
+                <li>Not just managing what's on your systems but also the existence of the systems themselves</li>
             </ul>
         </section>
     </div>
     <div class="slide step" data-scale="1" data-x="7200" data-y="3200" data-z="1000">
         <section>
-            <p>What does treating "config as code" mean in a pracital sense?</p>
+            <p>What does treating "configuration as code" mean in a pracital sense?</p>
             <ul>
-                <li>Configuration is code;</li>
+                <li>Configuration often !is! code;</li>
                 <li>Apache config file(s) is/are basically a programming environment already</li>
             </ul>
             <p>What that means is using (good) practices common to the world of a programmer.</p>
@@ -680,7 +667,7 @@
     </div>
     <div class="slide step" id="revision-control-and-deployment" data-scale="1" data-x="8400" data-y="3200" data-z="1000">
         <header>
-            <h1>revision control and deployment</h1>
+            <h1>Revision Control And Deployment</h1>
         </header>
         <section>
             <ul>
@@ -691,7 +678,7 @@
     </div>
     <div class="slide step" id="tests" data-scale="1" data-x="0" data-y="4000" data-z="1000">
         <header>
-            <h1>tests</h1>
+            <h1>Tests</h1>
         </header>
         <section>
             <ul>
@@ -704,7 +691,7 @@
     </div>
     <div class="slide step" id="continuous-integration-continuous-deploy" data-scale="1" data-x="1200" data-y="4000" data-z="1000">
         <header>
-            <h1>continuous integration/continuous deploy</h1>
+            <h1>Continuous Integration/Continuous Deploy</h1>
         </header>
         <section>
             <ul>
@@ -713,7 +700,7 @@
                         <dt>Follow a process</dt>
                         <dd>
                             <ul>
-                                <li>simple: design/code/test/deploy/maintain</li>
+                                <li>Simple: design/code/test/deploy/maintain</li>
                             </ul>
                         </dd>
                     </dl>
@@ -723,10 +710,10 @@
                         <dt>This can include more complex steps:</dt>
                         <dd>
                             <ul>
-                                <li>modeling</li>
-                                <li>automated code validation</li>
-                                <li>defect tracking</li>
-                                <li>code reviews</li>
+                                <li>Modeling</li>
+                                <li>Automated code validation</li>
+                                <li>Defect tracking</li>
+                                <li>Code reviews</li>
                             </ul>
                         </dd>
                     </dl>
@@ -734,9 +721,9 @@
             </ul>
         </section>
     </div>
-    <div class="slide step" id="example-this-talk" data-scale="1" data-x="2400" data-y="4000" data-z="1000">
+    <div class="slide step" id="simple-example-this-talk" data-scale="1" data-x="2400" data-y="4000" data-z="1000">
         <header>
-            <h1>Example: this talk ;-)</h1>
+            <h1>Simple Example: This Talk</h1>
         </header>
         <section>
             <ul>
@@ -761,7 +748,100 @@
             <img align="center" alt="GitHub Repo View" height="500px" src="img/Talk-Github.png" />
         </section>
     </div>
-    <div class="slide step" id="travis-ci" data-scale="1" data-x="4800" data-y="4000" data-z="1000">
+    <div class="slide highlight step" id="travis-ci-configuration" data-scale="1" data-x="4800" data-y="4000" data-z="1000">
+        <header>
+            <h1>Travis CI configuration</h1>
+        </header>
+        <section>
+            <pre><code class="yaml"><span class="c1"># .travis.yml:</span>
+<span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">python</span>
+<span class="l-Scalar-Plain">python</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="s">"3.5"</span>
+<span class="l-Scalar-Plain">install</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">pip install -r requirements.txt</span>
+<span class="l-Scalar-Plain">script</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">bash make.sh</span>
+<span class="l-Scalar-Plain">after_success</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">bash deploy.sh</span>
+<span class="l-Scalar-Plain">env</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">global</span><span class="p-Indicator">:</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">secure</span><span class="p-Indicator">:</span> <span class="s">"HkI0NJy4XDHC/7HMhjkLUW/dJYOi8irePyPHRRu2yQXbx2n7+zGjXFRsfQLjgEtorOyVJMhmW/4wKG62x</span></code></pre>
+            <pre><code class="bash"><span class="c"># requirements.txt:
+</span><span class="nv">rst2html5</span><span class="o">==</span>1.4
+rst2html5slides</code></pre>
+        </section>
+    </div>
+    <div class="slide highlight step" id="create-index-html" data-scale="1" data-x="6000" data-y="4000" data-z="1000">
+        <header>
+            <h1>Create index.html</h1>
+        </header>
+        <section>
+            <pre><code class="bash"><span class="c"># make.sh:
+#!/bin/bash
+</span>
+. ./create-sources.sh
+
+cat *.rst &gt;&gt;slides.rst
+
+rst2html5slides --traceback --strict --tab-width<span class="o">=</span>4<span class="se">\
+</span>            --template templates/jmpress.html <span class="se">\
+</span>                        slides.rst index.html
+
+rm -f slides.rst</code></pre>
+            <pre><code class="bash"><span class="c"># create-sources.sh:
+#!/bin/bash
+</span>
+<span class="nb">cd</span> <span class="s2">"</span><span class="si">${</span><span class="nv">0</span><span class="p">%/*</span><span class="si">}</span><span class="s2">"</span>
+
+pygmentize <span class="o">()</span> <span class="o">{</span>
+    <span class="nv">FILE</span><span class="o">=</span><span class="nv">$1</span>
+    <span class="nv">CODE</span><span class="o">=</span><span class="nv">$2</span>
+    <span class="nb">echo</span> <span class="s2">".. code:: </span><span class="si">${</span><span class="nv">CODE</span><span class="si">}</span><span class="s2">"</span> &gt;src/<span class="si">${</span><span class="nv">FILE</span><span class="si">}</span>
+    <span class="nb">echo</span> <span class="s2">"    "</span> &gt;&gt;src/<span class="si">${</span><span class="nv">FILE</span><span class="si">}</span>
+    <span class="nb">echo</span> <span class="s2">"    # </span><span class="si">${</span><span class="nv">FILE</span><span class="si">}</span><span class="s2">:"</span> &gt;&gt;src/<span class="si">${</span><span class="nv">FILE</span><span class="si">}</span>
+    <span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span><span class="s1">''</span> <span class="nb">read</span> -r line<span class="p">;</span> <span class="k">do</span>
+        <span class="nb">printf</span> <span class="s2">"    %.100s\n"</span> <span class="s2">"</span><span class="nv">$line</span><span class="s2">"</span>&gt;&gt;src/<span class="si">${</span><span class="nv">FILE</span><span class="si">}</span>
+    <span class="k">done</span> &lt; <span class="si">${</span><span class="nv">FILE</span><span class="si">}</span>
+<span class="o">}</span>
+
+pygmentize .travis.yml yaml
+pygmentize make.sh bash
+pygmentize create-sources.sh bash
+pygmentize deploy.sh bash</code></pre>
+        </section>
+    </div>
+    <div class="slide highlight step" id="commit-index-html-to-github" data-scale="1" data-x="7200" data-y="4000" data-z="1000">
+        <header>
+            <h1>Commit index.html To GitHub</h1>
+        </header>
+        <section>
+            <pre><code class="bash"><span class="c"># deploy.sh:
+#!/bin/bash
+</span>
+<span class="nb">set</span> -o errexit -o nounset
+
+<span class="nv">rev</span><span class="o">=</span><span class="k">$(</span>git rev-parse --short HEAD<span class="k">)</span>
+
+git init
+git config user.name <span class="s2">"Thomas William"</span>
+git config user.email <span class="s2">"thomas.william@citrix.com"</span>
+
+git remote add upstream <span class="se">\
+</span>    <span class="s2">"https://</span><span class="nv">$GH_TOKEN</span><span class="s2">@github.com/ConfigurationAsCode/ConfigurationAsCode.github.io.git"</span>
+git fetch upstream
+git reset upstream/master
+
+<span class="nb">echo</span> <span class="s2">"configurationascode.github.io"</span> &gt; CNAME
+
+touch .
+
+git add -A .
+git commit -m <span class="s2">"rebuild pages at </span><span class="si">${</span><span class="nv">rev</span><span class="si">}</span><span class="s2">"</span>
+git push -q upstream HEAD:master</code></pre>
+        </section>
+    </div>
+    <div class="slide step" id="travis-ci" data-scale="1" data-x="8400" data-y="4000" data-z="1000">
         <header>
             <h1>Travis CI</h1>
         </header>
@@ -769,7 +849,7 @@
             <img align="center" alt="Travis CI View" height="500px" src="img/Talk-Travis.png" />
         </section>
     </div>
-    <div class="slide step" id="cas-citrix-1-2" data-scale="1" data-x="6000" data-y="4000" data-z="1000">
+    <div class="slide step" id="cas-citrix-1-2" data-scale="1" data-x="0" data-y="4800" data-z="1000">
         <header>
             <h1>CAS @ Citrix 1/2</h1>
         </header>
@@ -780,7 +860,7 @@
                         <dt>The build plans to create the docker images are create by jenkins jobs</dt>
                         <dd>
                             <ul>
-                                <li>Dependency graphs is built by parsing Dockerfiles</li>
+                                <li>Dependency graphs are built by parsing Dockerfiles</li>
                                 <li>Plans trigger each other in right order</li>
                                 <li>Change to base layer invokes rebuilt of upper layers</li>
                                 <li>Configuration is completely stored in git repository</li>
@@ -791,7 +871,7 @@
             </ul>
         </section>
     </div>
-    <div class="slide step" id="cas-citrix-2-2" data-scale="1" data-x="7200" data-y="4000" data-z="1000">
+    <div class="slide step" id="cas-citrix-2-2" data-scale="1" data-x="1200" data-y="4800" data-z="1000">
         <header>
             <h1>CAS @ Citrix 2/2</h1>
         </header>
@@ -799,7 +879,7 @@
             <ul>
                 <li>
                     <dl>
-                        <dt>To create a new docker image in Artifactor/Jenkins:</dt>
+                        <dt>To create a new docker image in Artifactory/Jenkins:</dt>
                         <dd>
                             <ul>
                                 <li>commit/push Dockerfile to git repository</li>
@@ -813,33 +893,40 @@
             </ul>
         </section>
     </div>
-    <div class="slide step" id="one-plan-for-each-dockerfile" data-scale="1" data-x="8400" data-y="4000" data-z="1000">
+    <div class="slide step" id="one-plan-for-each-dockerfile" data-scale="1" data-x="2400" data-y="4800" data-z="1000">
         <header>
-            <h1>One Plan for each Dockerfile</h1>
+            <h1>One Plan For Each Dockerfile</h1>
         </header>
         <section>
             <img align="center" alt="Jenins Plan Creation Plan" height="500px" src="img/JeninsPlanCreation.png" />
         </section>
     </div>
-    <div class="slide step" id="live-demo-of-jenkinsfile-feature" data-scale="1" data-x="0" data-y="4800" data-z="1000">
+    <div class="slide step" id="live-demo-of-jenkins" data-scale="1" data-x="3600" data-y="4800" data-z="1000">
         <header>
-            <h1>Live Demo of Jenkinsfile feature</h1>
+            <h1>Live Demo Of Jenkins</h1>
         </header>
         <section>
             <ul>
-                <li>
-                    <dl>
-                        <dt>The configuration of a plan changes with the sourcecode</dt>
-                        <dd>
-                            <ul>
-                                <li>if you add android capabilities to your code, you will need to change your build plan to built for android</li>
-                            </ul>
-                        </dd>
-                    </dl>
-                </li>
-                <li>if you need to apply a hotfix for an old version, your changed build-plan will not work with the old source code base</li>
+                <li>The configuration of a plan changes with the sourcecode</li>
+                <li>Adding endpoints (capabilities) to your code, you will need to change your build as well</li>
+                <li>If you need to apply a hotfix for an old version, your changed build-plan will not work with the old source code base</li>
+                <li>Your build machines may have changed (newer compiler versions etc.)</li>
             </ul>
-            <p>-&gt; solution is to save build plan alongside with the source code: <em>Jenkinsfile</em></p>
+            <p>-&gt; Solution is to save build plan (and requirements) alongside with the source code: <em>Jenkinsfile</em></p>
+        </section>
+    </div>
+    <div class="step" id="summary" data-scale="1" data-x="4800" data-y="4800" data-z="1000">
+        <header>
+            <h1>Summary</h1>
+        </header>
+        <section>
+            <p>Moving build system into the cloud enables us to:</p>
+            <ul>
+                <li>Scale up build machines according to (current) demand</li>
+                <li>Scale down on systems/apps we need to support (tech debt)</li>
+                <li>Massively increase automation using AWS</li>
+                <li>Provide more uniform environment across, dev, test, staging and production</li>
+            </ul>
         </section>
     </div>
     <div class="overview step" data-scale="8" data-x="4000" data-y="2400" id="overview" data-z="1000">
