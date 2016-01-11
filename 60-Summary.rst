@@ -1,3 +1,6 @@
+
+:class: slide
+
 Summary
 =======
 Moving build system into the cloud enables us to:
