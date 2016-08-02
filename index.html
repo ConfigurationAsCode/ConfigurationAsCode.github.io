@@ -66,7 +66,7 @@
     </div>
     <div class="slide step" id="me" data-scale="1" data-x="2400" data-y="0" data-z="1000">
         <header>
-            <h1>Who am I</h1>
+            <h1>Who Am I</h1>
         </header>
         <section>
             <p>Name: Thomas William</p>
@@ -111,7 +111,7 @@
     </div>
     <div class="slide step" id="mytopics" data-scale="1" data-x="3600" data-y="0" data-z="1000">
         <header>
-            <h1>Prior field of work</h1>
+            <h1>Prior Field Of Work</h1>
         </header>
         <section>
             <ul>
@@ -140,7 +140,7 @@
                                 <li>Desktops and apps (see next slide)</li>
                                 <li>Desktop as a Service (DaaS)</li>
                                 <li>Software as a Service (SaaS)</li>
-                                <li>Networking (Netscalar) and cloud</li>
+                                <li>Networking (Netscaler) and cloud</li>
                             </ul>
                         </dd>
                     </dl>
@@ -211,7 +211,7 @@
     </div>
     <div class="slide step" id="my-job" data-scale="1" data-x="0" data-y="800" data-z="1000">
         <header>
-            <h1>My job at Citrix</h1>
+            <h1>My Job At Citrix</h1>
         </header>
         <section>
             <ul>
@@ -250,7 +250,7 @@
                 <li>3 different build and deploy systems</li>
                 <li>3 different SCM systems</li>
                 <li>4++ different code quality and code coverage systems</li>
-                <li>multiple different packaging and deployment workflows</li>
+                <li>Multiple different packaging and deployment workflows</li>
             </ul>
         </section>
     </div>
@@ -320,7 +320,7 @@
         <section>
             <ul>
                 <li>Machines managed manually with ssh/scripts/build-plans</li>
-                <li>Congigurations differ between machines</li>
+                <li>Configurations differ between machines</li>
                 <li>Buildplans therefor have to be tied to certain machines</li>
                 <li>No equal load distribution</li>
                 <li>Crash of single machine may block a plan/team</li>
@@ -328,9 +328,9 @@
             <p>-&gt; "Pets vs. Cattle"</p>
         </section>
     </div>
-    <div class="slide step" id="workflows-span-multiple-systems-example" data-scale="1" data-x="8400" data-y="800" data-z="1000">
+    <div class="slide step" id="example-workflow" data-scale="1" data-x="8400" data-y="800" data-z="1000">
         <header>
-            <h1>Workflows Span Multiple Systems (Example)</h1>
+            <h1>Example Workflow</h1>
         </header>
         <section>
             <ul>
@@ -352,7 +352,6 @@
                             <ul>
                                 <li>Upload rpms to Artifactory</li>
                                 <li>Trigger docker container creation in Jenkins</li>
-                                <li>Trigger end2end tests in test environment using Cucumber (Bamboo-plan)</li>
                             </ul>
                         </dd>
                     </dl>
@@ -367,6 +366,7 @@
                         </dd>
                     </dl>
                 </li>
+                <li>Bamboo childplan for end2end tests in test environment using Cucumber</li>
             </ul>
         </section>
     </div>
@@ -375,7 +375,7 @@
             <h1>Bamboo Plan: RTCGW RPM Build</h1>
         </header>
         <section>
-            <img align="center" alt="Gateway Project Plan" height="400px" src="img/Gateway-Bamboo.png" />
+            <img align="center" alt="Gateway Project Plan" height="450px" src="img/Gateway-Bamboo.png" />
         </section>
     </div>
     <div class="slide step" id="RTCGW-Bamboo1a" data-scale="1" data-x="1200" data-y="1600" data-z="1000">
@@ -383,7 +383,7 @@
             <h1>Bamboo Plan Configuration</h1>
         </header>
         <section>
-            <img align="center" alt="Gateway Project Plan Configuration" height="400px" src="img/Gateway-Bamboo-Config.png" />
+            <img align="center" alt="Gateway Project Plan Configuration" height="450px" src="img/Gateway-Bamboo-Config.png" />
         </section>
     </div>
     <div class="slide step" id="RTCGW-Bamboo1b" data-scale="1" data-x="2400" data-y="1600" data-z="1000">
@@ -391,7 +391,7 @@
             <h1>Bamboo Child Plans</h1>
         </header>
         <section>
-            <img align="center" alt="Child Plans" height="400px" src="img/Gateway-Bamboo-Childs.png" />
+            <img align="center" alt="Child Plans" height="430px" src="img/Gateway-Bamboo-Childs.png" />
         </section>
     </div>
     <div class="slide step" id="RTCGW-Bamboo2" data-scale="1" data-x="3600" data-y="1600" data-z="1000">
@@ -399,7 +399,7 @@
             <h1>Bamboo Plan: RTCGW RPM Upload</h1>
         </header>
         <section>
-            <img align="center" alt="Upload and Container trigger plan" height="400px" src="img/Gateway-Bamboo-Docker.png" />
+            <img align="center" alt="Upload and Container trigger plan" height="450px" src="img/Gateway-Bamboo-Docker.png" />
         </section>
     </div>
     <div class="slide step" id="RTCGW-Artifactory" data-scale="1" data-x="4800" data-y="1600" data-z="1000">
@@ -407,7 +407,7 @@
             <h1>Artifact Store For RPMs</h1>
         </header>
         <section>
-            <img align="center" alt="Artifactory" height="400px" src="img/Gateway-Artifactory-RPMs.png" />
+            <img align="center" alt="Artifactory" height="450px" src="img/Gateway-Artifactory-RPMs.png" />
         </section>
     </div>
     <div class="slide step" id="RTCGW-Jenkins1" data-scale="1" data-x="6000" data-y="1600" data-z="1000">
@@ -415,7 +415,7 @@
             <h1>Jenkins Plan: RTCGW Container</h1>
         </header>
         <section>
-            <img align="center" alt="Docker Container Creation" height="400px" src="img/Gateway-Jenkins-Container.png" />
+            <img align="center" alt="Docker Container Creation" height="450px" src="img/Gateway-Jenkins-Container.png" />
         </section>
     </div>
     <div class="slide step" id="RTCGW-Bamboo3" data-scale="1" data-x="7200" data-y="1600" data-z="1000">
@@ -423,7 +423,7 @@
             <h1>Bamboo Plan: RTCGW Testdeploy</h1>
         </header>
         <section>
-            <img align="center" alt="PlaceHolder" height="400px" src="img/Gateway-Bamboo-Deploy.png" />
+            <img align="center" alt="PlaceHolder" height="450px" src="img/Gateway-Bamboo-Deploy.png" />
         </section>
     </div>
     <div class="slide step" id="the-new-approach" data-scale="1" data-x="8400" data-y="1600" data-z="1000">
@@ -447,8 +447,8 @@
         </header>
         <section>
             <ul>
-                <li>Developer's hands to Customer's hands in &lt;= 1 hour</li>
-                <li>A new Developer can produce Customer value in &lt;= 24 hours</li>
+                <li>Developer's hands to Customer's hands in (less than) 1 hour</li>
+                <li>A new Developer can produce Customer value in (less than) 24 hours</li>
             </ul>
         </section>
     </div>
@@ -632,7 +632,7 @@
             <h1>Jenkins Deploys Jenkins</h1>
         </header>
         <section>
-            <img align="center" alt="Jenkins deploys Jenkins" height="300px" src="img/JenkinsDeployJenkins.png" />
+            <img align="center" alt="Jenkins deploys Jenkins" height="350px" src="img/JenkinsDeployJenkins.png" />
         </section>
     </div>
     <div class="slide step" id="docker-image-creation" data-scale="1" data-x="4800" data-y="3200" data-z="1000">
@@ -659,7 +659,7 @@
         <section>
             <p>What does treating "configuration as code" mean in a pracital sense?</p>
             <ul>
-                <li>Configuration often !is! code;</li>
+                <li>Configuration often !is! code</li>
                 <li>Apache config file(s) is/are basically a programming environment already</li>
             </ul>
             <p>What that means is using (good) practices common to the world of a programmer.</p>
@@ -767,7 +767,7 @@
 <span class="l-Scalar-Plain">env</span><span class="p-Indicator">:</span>
     <span class="l-Scalar-Plain">global</span><span class="p-Indicator">:</span>
         <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">secure</span><span class="p-Indicator">:</span> <span class="s">"HkI0NJy4XDHC/7HMhjkLUW/dJYOi8irePyPHRRu2yQXbx2n7+zGjXFRsfQLjgEtorOyVJMhmW/4wKG62x</span></code></pre>
-            <pre><code class="bash"><span class="c"># requirements.txt:
+            <pre><code class="bash"><span class="c1"># requirements.txt:
 </span><span class="nv">rst2html5</span><span class="o">==</span>1.4
 rst2html5slides</code></pre>
         </section>
@@ -777,7 +777,7 @@ rst2html5slides</code></pre>
             <h1>Create index.html</h1>
         </header>
         <section>
-            <pre><code class="bash"><span class="c"># make.sh:
+            <pre><code class="bash"><span class="c1"># make.sh:
 #!/bin/bash
 </span>
 . ./create-sources.sh
@@ -789,7 +789,7 @@ rst2html5slides --traceback --strict --tab-width<span class="o">=</span>4<span c
 </span>                        slides.rst index.html
 
 rm -f slides.rst</code></pre>
-            <pre><code class="bash"><span class="c"># create-sources.sh:
+            <pre><code class="bash"><span class="c1"># create-sources.sh:
 #!/bin/bash
 </span>
 pygmentize <span class="o">()</span> <span class="o">{</span>
@@ -815,7 +815,7 @@ pygmentize requirements.txt bash</code></pre>
             <h1>Commit index.html To GitHub</h1>
         </header>
         <section>
-            <pre><code class="bash"><span class="c"># deploy.sh:
+            <pre><code class="bash"><span class="c1"># deploy.sh:
 #!/bin/bash
 </span>
 <span class="nb">set</span> -o errexit -o nounset
