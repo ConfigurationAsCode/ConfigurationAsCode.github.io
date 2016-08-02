@@ -16,7 +16,7 @@ The New Approach
 Longterm Goals
 ==============
 
-- Developer's hands to Customer's hands in <= 1 hour
-- A new Developer can produce Customer value in <= 24 hours
+- Developer's hands to Customer's hands in (less than) 1 hour
+- A new Developer can produce Customer value in (less than) 24 hours
 
 

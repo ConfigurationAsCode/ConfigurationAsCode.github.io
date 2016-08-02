@@ -16,7 +16,7 @@ Citrix Systems, Inc.
 	- Desktops and apps (see next slide)
 	- Desktop as a Service (DaaS)
 	- Software as a Service (SaaS)
-	- Networking (Netscalar) and cloud
+	- Networking (Netscaler) and cloud
 - Citrix gave:
 	- Cloudstack to the Apache Foundation
 	- Xen hypervisor to the Linux Foundation
@@ -61,7 +61,7 @@ Dresden Team Foto
 :id: my-job
 :class: slide
 
-My job at Citrix
+My Job At Citrix
 ================
 
 - I'm part of the build tools management team (BTM)

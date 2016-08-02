@@ -83,7 +83,7 @@ Jenkins Deploys Jenkins
 =======================
 
 .. image:: img/JenkinsDeployJenkins.png
-   :height: 300px
+   :height: 350px
    :alt: Jenkins deploys Jenkins
    :align: center
 

@@ -12,7 +12,7 @@ Configuration As Code
 
 What does treating "configuration as code" mean in a pracital sense?  
 
-- Configuration often !is! code;
+- Configuration often !is! code
 - Apache config file(s) is/are basically a programming environment already
  
 What that means is using (good) practices common to the world of a programmer.

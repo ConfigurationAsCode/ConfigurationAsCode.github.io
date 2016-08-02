@@ -1,7 +1,7 @@
 :id: me
 :class: slide
 
-Who am I
+Who Am I
 ========
 
 Name: Thomas William
@@ -30,7 +30,7 @@ EMail: thomas[dot]william[at]citrix[dot]com
 :id: mytopics
 :class: slide
 
-Prior field of work
+Prior Field Of Work
 ===================
 
 - Product manager for the performance analysis software Vampir
